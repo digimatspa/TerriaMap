@@ -3,7 +3,7 @@
 /*global require,window */
 
 var terriaOptions = {
-    baseUrl: 'build/TerriaJS'
+    baseUrl: '/media/terria/build/TerriaJS'
 };
 
 // checkBrowserCompatibility('ui');
@@ -57,7 +57,7 @@ module.exports = terria.start({
     // If you don't want the user to be able to control catalog loading via the URL, remove the applicationUrl property below
     // as well as the call to "updateApplicationOnHashChange" further down.
     applicationUrl: window.location,
-    configUrl: 'config.json',
+    configUrl: '/media/terria/config.json',
     shareDataService: new ShareDataService({
         terria: terria
     })
@@ -86,8 +86,9 @@ module.exports = terria.start({
         var australiaBaseMaps = createAustraliaBaseMapOptions(terria);
         var globalBaseMaps = createGlobalBaseMapOptions(terria, terria.configParameters.bingMapsKey);
 
-        var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
-        selectBaseMap(terria, allBaseMaps, 'Bing Maps Aerial with Labels', true);
+        // var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
+        var allBaseMaps = globalBaseMaps;
+        selectBaseMap(terria, allBaseMaps, 'Positron (Light)', true);
 
         // Show a modal disclaimer before user can do anything else.
         if (defined(terria.configParameters.globalDisclaimer)) {
