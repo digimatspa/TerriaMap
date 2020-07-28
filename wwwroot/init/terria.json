@@ -1,9 +1,9 @@
 {
   "homeCamera": {
-    "north": 40.02,
-    "east": -170.02,
-    "south": 40,
-    "west": -170
+    "north": 41.89,
+    "east": 12.504,
+    "south": 41.88,
+    "west": 12.47
   },
   "catalog": [
     {
@@ -21,40 +21,40 @@
           "tokenParameterName": "access_token",
         },
         {
-          "name": "Carta geologica Planimetrica",
+          "name": "Planimetria (dettaglio)",
           "type": "wms",
           "description": "![Colosseo](/media/terria/images/landing/logo_PARCO_white.png)\n\nDati provenienti dal WMS del progetto Monitoraggio Parco Archeologico del Colosseo.",
           "url": "/geoserver/wms",
           "isGeoserver": true,
           "isShown": false,
           "isEnabled": true,
-          "layers": "geonode:settori_foro_palatino_domus_corretto_rev_l_gau-e",
+          "layers": "geonode:settori_foro_palatino_domus_corretto_rev_l_gau_e",
           "tokenUrl": "/helgoland/token/",
           "tokenParameterName": "access_token",
           "items": []
         },
         {
-          "name": "Carta geologica Campiture",
+          "name": "Planimetria (campiture)",
           "type": "wms",
           "description": "![Colosseo](/media/terria/images/landing/logo_PARCO_white.png)\n\nDati provenienti dal WMS del progetto Monitoraggio Parco Archeologico del Colosseo.",
           "url": "/geoserver/wms",
           "isGeoserver": true,
           "isShown": false,
           "isEnabled": true,
-          "layers": "geonode:settori_foro-palatino_domus_corretto_rev_f_gau-e",
+          "layers": "geonode:settori_foro_palatino_domus_corretto_rev_f_gau_e",
           "tokenUrl": "/helgoland/token/",
           "tokenParameterName": "access_token",
           "items": []
         },
         {
-          "name": "Carta geologica Punti",
+          "name": "Planimetria (etichette)",
           "type": "wms",
           "description": "![Colosseo](/media/terria/images/landing/logo_PARCO_white.png)\n\nDati provenienti dal WMS del progetto Monitoraggio Parco Archeologico del Colosseo.",
           "url": "/geoserver/wms",
           "isGeoserver": true,
           "isShown": false,
           "isEnabled": true,
-          "layers": "geonode:settori_foro-palatino_domus_corretto_rev_p_gau-e",
+          "layers": "geonode:settori_foro_palatino_domus_corretto_rev_p_gau_e",
           "tokenUrl": "/helgoland/token/",
           "tokenParameterName": "access_token",
           "items": []
@@ -115,27 +115,26 @@
       //       ]
       // },
       {
-        "name": "STA",
+        "name": "Sensori",
         "type": "group",
-        "description": "STA",
+        "description": "Sensori installati nel Parco del Colosseo",
         "items": [
+            {
+            "name": "Sensori",
+            "url": "/helgosensors/",
+            "type": "sta",
+            "tableStyle": {
+            "scaleByValue": true,
+            "scale": 2,
+            "minDisplayValue": 0
+            },
+            "defaultDuration": "21d",
 
-        {
-        "name": "STA-1",
-        "url": "/helgosensors/",
-        "type": "sta",
-        "tableStyle": {
-        "scaleByValue": true,
-        "scale": 2,
-        "minDisplayValue": 0
-        },
-        "defaultDuration": "21d",
-
-        "datastreamsName": "Sensori",
-        "filterByDatastreams": false,
-        "filterByObservedProperties": false,
-        },
-        ]
+            "datastreamsName": "Sensori",
+            "filterByDatastreams": false,
+            "filterByObservedProperties": false,
+            },
+          ]
         },
       {
         "name": "Segnalazioni",
