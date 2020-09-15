@@ -76,49 +76,7 @@
           "items": [],
           "isLegendVisible": false,
         },
-
-      // {
-      //     "name": "Dati da sensori",
-      //     "type": "group",
-      //     "description": "Dati da sensori (ALSIA SOS). Sviluppato da Digimat.",
-      //     "items": [
-      //           {
-      //               "name": "ALSIA-1",
-      //               "url": "http://alsia.digimat.it:8080/sos/service",
-      //               "type": "sos",
-      //               "tableStyle": {
-      //                   "scaleByValue": true,
-      //                   "scale": 2,
-      //                   "minDisplayValue": 0
-      //               },
-      //               "proceduresName": "Frequency",
-      //               "observablePropertiesName": "Observation type",
-      //               "requestSizeLimit": 225,
-      //               "requestNumberLimit": 3,
-      //               "tryToLoadObservationData": true,
-      //               "procedures": [
-      //                   {
-      //                       "identifier": "ALSIA-1",
-      //                       "title": "ALSIA 1",
-      //                       "defaultDuration": "2d"
-      //                   }
-      //               ],
-      //               "observableProperties": [
-      //                   {
-      //                       "identifier": "Temperatura",
-      //                       "title": "Temperatura",
-      //                       "units": "C"
-      //                   },
-      //                                           {
-      //                       "identifier": "Umidita",
-      //                       "title": "Umidita",
-      //                       "units": "%"
-      //                   }
-      //               ]
-      //           },
-      //       ]
-      // },
-      {
+        {
 
           "name": "Sensori",
           "description": "Sensori installati nel Parco del Colosseo",
@@ -147,31 +105,36 @@
         "isShown": true,
         "items": [],
         "isLegendVisible": false,
-       },
-       {
-          "name": "Cantieri",
-          "type": "geojson",
-          "description": "![Colosseo](/media/terria/img/landing/logo_PARCO_white.png)\n\nCantieri presenti nel parco.",
-          "url": "/webgis/geojson?type=cantieri",
-          "isEnabled": false,
-          "isShown": true,
-          "items": [],
-          "isLegendVisible": false,
-       },
-        {
-          "name": "Area Colosseo 3D",
-          "type": "gltf",
-          "url": "/media/img/map3d.glb",
-          "origin": {
-            "longitude":12.4907000,
-            "latitude": 41.8903500,
-            "height": 0.0
-          },
-          "shadows": "CAST",
-          "upAxis": "Y"
+        "polling": {
+            "seconds": 600
         }
-
-        ]
+      },
+      {
+        "name": "Cantieri",
+        "type": "geojson",
+        "description": "![Colosseo](/media/terria/img/landing/logo_PARCO_white.png)\n\nCantieri presenti nel parco.",
+        "url": "/webgis/geojson?type=cantieri",
+        "isEnabled": false,
+        "isShown": true,
+        "items": [],
+        "isLegendVisible": false,
+        "polling": {
+            "seconds": 600
+        }
+      },
+      {
+        "name": "Area Colosseo 3D",
+        "type": "gltf",
+        "url": "/media/img/map3d.glb",
+        "origin": {
+          "longitude":12.4907000,
+          "latitude": 41.8903500,
+          "height": 0.0
+        },
+        "shadows": "CAST",
+        "upAxis": "Y"
       }
+      ]
+    }
   ]
 }
