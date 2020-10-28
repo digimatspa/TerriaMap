@@ -78,20 +78,48 @@
     #ui > div > div.tjs-standard-user-interface__ui-root > div.tjs-standard-user-interface__ui > div > div > div:nth-child(2) > div > div:nth-child(1) > div > div.tjs-panel__inner.tjs-setting-panel__dropdown-inner.tjs-panel__is-open > div {
       background-color: #25476a;
     }
+
     .tjs-side-panel__header {
-        padding: 0 5px;
-        background: #25476a;
-        padding-top: 10px;
-    }
-    .tjs-mobile-header__mobile-header{
-        background: #25476a;
-    }
-    .tjs-standard-user-interface__sidePanel {
-        background: #25476a;
-    }
-    .tjs-side-panel__body {
-        overflow: auto; 
-    }
+      padding: 0 5px;
+      background: #25476a;
+      padding-top: 10px;
+  }
+  .tjs-mobile-header__mobile-header{
+      background: #25476a;
+  }
+  .tjs-standard-user-interface__sidePanel {
+      background: #25476a;
+  }
+  .tjs-side-panel__body {
+      overflow: auto;
+  }
+
+  @media (min-width: 992px) {
+      .tjs-menu-bar__menu-area {
+          width: calc(100% - 450px);
+      }
+
+      .tjs-standard-user-interface__featureInfo {
+          left: calc(50% - 350px);
+          top: 100px;
+          width: unset;
+          min-width: 350px;
+      }
+  }
+
+
+  #ui > div > div.tjs-standard-user-interface__ui-root > div:nth-child(2) > div.tjs-menu-bar__menu-area > ul > li:nth-child(5) {
+      display: none;
+  }
+
+  div.tjs-dropdown__dropdown.tjs-feature-info-download__download {
+      display: none;
+  }
+
+  #ui > div > div.tjs-standard-user-interface__ui-root > div.tjs-standard-user-interface__featureInfo > div > div > ul > li:nth-child(1) > ul > li > section > div > div:nth-child(1) > table > tbody > tr > td {
+    border: unset;
+  }
+
 </style>
     <script>
         var url = window.location.search.substring(1);
