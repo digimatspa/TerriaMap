@@ -31,6 +31,9 @@
     <!-- Leaflet -->
     <script>L_PREFER_CANVAS = true;</script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script type="text/javascript">
+      window.$on = (e,d,g,h,b)=>e.addEventListener(d,c=>{for(d=e,b=c.target;b!=d;)b.matches(g)?h.call(d=b,c,b):b=b.parentNode})
+    </script>
 </head>
 
 <body>
@@ -133,6 +136,48 @@
 
   #ui > div > div.tjs-standard-user-interface__ui-root > div.tjs-standard-user-interface__featureInfo > div > div > ul > li:nth-child(1) > ul > li > section > div > div:nth-child(1) > table > tbody > tr > td {
     border: unset;
+  }
+
+
+  .axis path,
+  .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+  }
+
+  .x.axis path {
+      display: none;
+  }
+
+  .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 1.5px;
+  }
+
+  .overlay {
+      fill: none;
+      pointer-events: all;
+  }
+
+  .focus circle {
+      fill: steelblue;
+  }
+
+  .focus text {
+      font-size: 14px;
+       fill: rgba(63, 72, 84, 0.95);
+  }
+
+  .tooltip {
+      fill: white;
+      stroke: #000;
+  }
+
+  .tooltip-date, .tooltip-value {
+      font-weight: bold;
+       fill: rgba(63, 72, 84, 0.95);
   }
 
 </style>
