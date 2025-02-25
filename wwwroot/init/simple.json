@@ -7,6 +7,12 @@
   },
   "catalog": [
     {
+      "id": "Chlorophyll",
+      "name": "Chlorophyll-a 300m Daily (Level 3)",
+      "type": "wmts-group",
+      "url": "https://wmts.marine.copernicus.eu/teroWmts/OCEANCOLOUR_GLO_BGC_L3_MY_009_103/cmems_obs-oc_glo_bgc-plankton_my_l3-olci-300m_P1D_202211?request=GetCapabilities&service=WMS"
+    },
+    {
       "id": "ZIdekvc10z",
       "type": "wms-group",
       "name": "Test",
