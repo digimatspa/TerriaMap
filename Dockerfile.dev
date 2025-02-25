@@ -1,0 +1,34 @@
+# Prepare terriajs for development
+
+# mkdir packages
+# cd packages
+# git clone https://github.com/digimatspa/terriajs.git
+# git checkout oceano
+# cd ..
+
+# Create the development container
+# a) Build empty image
+#    docker build -t terriadev ./ -f Dockerfile.dev
+# b) Create container
+#    docker run -p 3001:3001 -d -it --mount type=bind,source="$(pwd)",target=/app --name terriadev terriadev
+# c) Connect to container
+#     docker exec -it terriadev bash
+
+# First time only:
+# a) yarn install
+# ----
+# Then
+# a) yarn gulp build 
+# or
+# a) yarn gulp watch
+# b) yarn start
+
+FROM node:20 AS build
+# Set the working directory. If it doesn't exists, it'll be created
+WORKDIR /app
+
+# Define the env variable `PORT`
+ENV PORT 3000
+
+# Expose the port 3000
+EXPOSE ${PORT}
