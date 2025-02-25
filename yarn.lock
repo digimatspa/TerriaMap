@@ -9809,10 +9809,9 @@ terriajs-typings-for-css-modules-loader@^2.5.2:
   optionalDependencies:
     prettier "*"
 
-terriajs@8.8.0:
+"terriajs@github:digimatspa/terriajs#oceano":
   version "8.8.0"
-  resolved "https://registry.yarnpkg.com/terriajs/-/terriajs-8.8.0.tgz#2ec7f944a5caeacb7d2da5618e679efb308bc817"
-  integrity sha512-TcyV40aFdoN4ZSsAOGz8HvC2I85h2NQ5umKgA3nOtjUL+yH+rgNPvOP+183f01wIHxcvRrJUxuEDxkbHEkxg6A==
+  resolved "https://codeload.github.com/digimatspa/terriajs/tar.gz/6308f8cb0a9142305dc86cea1110722287a3d124"
   dependencies:
     "@babel/core" "^7.23.5"
     "@babel/parser" "^7.23.5"
