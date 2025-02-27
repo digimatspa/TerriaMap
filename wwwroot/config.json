@@ -69,13 +69,15 @@
     // "showInAppGuides": false,
     // see `languageOverrides.json` in languages/en
     "languageConfiguration": {
-      "enabled": false,
+      "enabled": true,
       "debug": false,
       "languages": {
+        "es": "Español",
         "en": "English",
         "fr": "Français"
       },
-      "fallbackLanguage": "en"
+      "fallbackLanguage": "es",
+      "changeLanguageOnStartWhen": []
     },
     "searchBarConfig": {},
     "searchProviders": [
